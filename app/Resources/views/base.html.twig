@@ -2,12 +2,94 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {#<script src="js/main.js"></script>#}
+
+
+        <title>{% block title %}News!{% endblock %}</title>
+
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        {% endblock %}
+
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
+
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span>NEWS</span>
+                    <form class="form-search">
+                        <input type="text" class="input-medium search-query">
+                        <button type="submit" class="btn">Найти</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">NEWS</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Главная</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Происшествия
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a  href="#">Мир</a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="test" href="#">Украина</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Киев</a></li>
+                                        <li><a href="#">Другие города</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Спорт</a></li>
+                        <li><a href="#">Экономика</a></li>
+                        <li><a href="#">Политика</a></li>
+                        <li><a href="#">Технологии</a></li>
+                        <li><a href="#">Мир</a></li>
+                        <li><a href="#">Наука</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+
+            {% block body %}{% endblock %}
+
+
+            <footer class="text-center">
+                <p>&copy Copyright NEWS</p>
+            </footer>
+
+
+
+
+
+
+
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+        {% endblock %}
     </body>
 </html>
+
+
+

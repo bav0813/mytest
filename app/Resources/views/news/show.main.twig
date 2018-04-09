@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>This is the main page</h1>
+
+
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Происшествия</h3>
+                <ul>
+                    {% for new_no,content in news1 %}
+
+                        <a href="/accidents/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/accidents' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Спорт</h3>
+                <ul>
+                    {% for new_no,content in news2 %}
+
+                        <a href="/sport/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/sport' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Экономика</h3>
+                <ul>
+                    {% for new_no,content in news3 %}
+
+                        <a href="/economics/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/economics' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Политика</h3>
+                <ul>
+                    {% for new_no,content in news4 %}
+
+                        <a href="/politics/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/politics' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Технологии</h3>
+                <ul>
+                    {% for new_no,content in news5 %}
+
+                        <a href="/technology/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/technology' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Мир</h3>
+                <ul>
+                    {% for new_no,content in news6 %}
+
+                        <a href="/world/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/world' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <h3>Наука</h3>
+                <ul>
+                    {% for new_no,content in news7 %}
+
+                        <a href="/world/{{ content.id }}">{{ content.title }} {{ content.id }}</a><br>
+
+                    {% endfor %}
+
+
+                </ul>
+                <a href='/science' class='btn' role='button' >Больше новостей</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+{% endblock %}
